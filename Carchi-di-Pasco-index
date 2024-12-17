@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christmas Video</title>
+    <style>
+        body {
+            font-family: 'Dancing Script', cursive; /* Elegant, festive font */
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://www.tripsavvy.com/thmb/wYw2Ut5LUfbhTrMN3JTptgeATHI=/2121x1414/filters:fill(auto,1)/GettyImages-155096857-5a020679ec2f640037cd0221.jpg'); /* Background Image */
+            background-size: cover;
+            background-position: center;
+            color: white;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #fireworks-container {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+        }
+
+        button {
+            background-color: #f44336;
+            color: white;
+            padding: 20px 40px;
+            margin: 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 22px;
+            font-family: 'Cinzel', serif; /* Elegant font for buttons */
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #d32f2f;
+        }
+
+        h1 {
+            font-size: 72px;
+            font-family: 'Dancing Script', cursive; /* Festive font for header */
+           
+        }
+
+        p {
+            font-size: 36px;
+            font-family: 'Dancing Script', cursive; /* Festive font for paragraph */
+        }
+    </style>
+    <!-- Link to Google Fonts for Great Vibes -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <h1>Feliz dianan di fiesta! Happy Holidays!</h1>
+    <p>Klik bo idioma preferi y gosa. Choose your language and enjoy.</p>
+    <button onclick="window.open('https://drive.google.com/file/d/1t9lS-e5W_9pF90MzClp1xKWX4T21yllj/view?usp=sharing', '_blank')">Lesa den Papiamento</button>
+    <button onclick="window.open('https://drive.google.com/file/d/1FDU7WgFvvDXQosnoMa5LZoJuyAwKAZnz/view?usp=sharing', '_blank')">Read in English</button>
+
+    <!-- Fireworks container -->
+    <div id="fireworks-container"></div>
+
+    <!-- Fireworks.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/fireworks-js/dist/fireworks.min.js"></script>
+
+    <!-- Fireworks Initialization Script -->
+    <script>
+        window.onload = function() {
+            const container = document.getElementById('fireworks-container');
+            const fireworks = new Fireworks(container, {
+                speed: 4,
+                acceleration: 1.05,
+                friction: 0.98,
+                gravity: 1,
+                particles: 150,
+                trace: 3,
+                explosion: 5,
+                autoresize: true,
+                delay: 0,
+                mouse: { click: true, move: true }
+            });
+            fireworks.start();
+        };
+    </script>
+
+</body>
+</html>
